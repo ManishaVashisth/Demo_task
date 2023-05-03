@@ -49,12 +49,6 @@ extension HomeViewController {
         let tblData = TableDataManger.shared.tableData
         cell.configure(tableData: tblData[indexPath.row])
         
-        //pagination
-        if indexPath.row == 6 {
-//            loadTable()
-//            print("index row: ", indexPath.row)
-        }
-        
         return cell
     }
     
@@ -77,10 +71,6 @@ extension HomeViewController {
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
             self.present(alert, animated: true, completion: nil)
         }
-    }
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        //
     }
     
 }
