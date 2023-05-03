@@ -23,10 +23,6 @@ class HomeViewController: UIViewController, UITableViewDataSource, UITableViewDe
         addRereshControl()
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-            return .portrait
-        }
-
 }
 
 // extension for table view
@@ -39,9 +35,7 @@ extension HomeViewController {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("numberOfRowsInSection count", TableDataManger.shared.tableData.count)
         return TableDataManger.shared.tableData.count
-//        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
